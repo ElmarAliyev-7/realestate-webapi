@@ -1,14 +1,14 @@
 ﻿namespace RealEstate.Domain.Entities
 {
-    public class ContactPost
+    public class Agent
     {
         public int Id { get; set; }
-        public string Fullname { get; set; }
+        public string Name { get; set; }
+        public string Surname { get; set; }
         public string Email { get; set; }
-        public string Message { get; set; }
-        public string Answer { get; set; }
-        public DateTime? AnsweredAt { get; set; }
-        public int? AnsweredBy { get; set; }
+        public string Phone { get; set; }
+        public string ImagePath { get; set; }
+        public decimal Rate { get; set; }
         public DateTime CreatedAt { get; set; }
         public int? CreatedBy { get; set; }
         public DateTime? LastModifiedAt { get; set; }
