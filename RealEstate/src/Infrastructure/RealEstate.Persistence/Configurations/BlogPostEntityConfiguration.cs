@@ -19,7 +19,7 @@ namespace RealEstate.Persistence.Configurations
             builder.ConfigureAuditable();
 
             builder.HasKey(m => m.Id);
-            builder.ToTable("ContactPosts");
+            builder.ToTable("BlogPosts");
         }
     }
 }
