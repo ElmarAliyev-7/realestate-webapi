@@ -26,7 +26,7 @@ namespace RealEstate.Persistence.Configurations
 
             builder.HasOne<BlogPostComment>()
                 .WithMany()
-                .HasForeignKey(m => m.ParentID)
+                .HasForeignKey(m => m.ParentId)
                 .HasPrincipalKey(m => m.Id)
                 .OnDelete(DeleteBehavior.NoAction);
         }
