@@ -1,19 +1,14 @@
-﻿namespace RealEstate.Domain.Entities
+﻿using RealEstate.Domain.Commons;
+
+namespace RealEstate.Domain.Entities
 {
-    public class ContactPost
+    public class ContactPost: BaseEntity<int>
     {
-        public int Id { get; set; }
         public string Fullname { get; set; }
         public string Email { get; set; }
         public string Message { get; set; }
         public string Answer { get; set; }
         public DateTime? AnsweredAt { get; set; }
         public int? AnsweredBy { get; set; }
-        public DateTime CreatedAt { get; set; }
-        public int? CreatedBy { get; set; }
-        public DateTime? LastModifiedAt { get; set; }
-        public int? LastModifiedBy { get; set; }
-        public DateTime? DeletedAt { get; set; }
-        public int? DeletedBy { get; set; }
     }
 }

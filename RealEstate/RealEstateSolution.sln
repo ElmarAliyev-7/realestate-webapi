@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealEstate.Persistence", "s
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealEstate.WebApi", "src\Presentation\RealEstate.WebApi\RealEstate.WebApi.csproj", "{5D50AB6F-4C87-4BB6-B4CA-5C1F6ABB6830}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealEstate.Infrastructure", "src\Infrastructure\RealEstate.Infrastructure\RealEstate.Infrastructure.csproj", "{73F5629C-AF6F-4AF9-9F58-75EA72B4096E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,10 @@ Global
 		{5D50AB6F-4C87-4BB6-B4CA-5C1F6ABB6830}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D50AB6F-4C87-4BB6-B4CA-5C1F6ABB6830}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D50AB6F-4C87-4BB6-B4CA-5C1F6ABB6830}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73F5629C-AF6F-4AF9-9F58-75EA72B4096E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73F5629C-AF6F-4AF9-9F58-75EA72B4096E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73F5629C-AF6F-4AF9-9F58-75EA72B4096E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73F5629C-AF6F-4AF9-9F58-75EA72B4096E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -61,6 +67,7 @@ Global
 		{541CF5EC-055F-49C4-B152-8ED26B8F4CE0} = {9076F699-98C3-45D0-8B58-60380DE6BEA3}
 		{95674310-8A51-47E4-9BB3-ADC6993F4F45} = {9F6056C7-BF61-4547-AE7A-3D645C0DEA24}
 		{5D50AB6F-4C87-4BB6-B4CA-5C1F6ABB6830} = {562AB7EE-7627-4979-95BD-2FF93AA5EE30}
+		{73F5629C-AF6F-4AF9-9F58-75EA72B4096E} = {9F6056C7-BF61-4547-AE7A-3D645C0DEA24}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CA74DD86-61FA-4660-9CF2-7307168D2E95}

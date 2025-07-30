@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using RealEstate.Domain.Entities;
+using RealEstate.Infrastructure.Extentions;
 
 namespace RealEstate.Persistence.Configurations
 {
@@ -13,6 +14,9 @@ namespace RealEstate.Persistence.Configurations
             builder.Property(m => m.Surname).HasColumnType("nvarchar").HasMaxLength(100).IsRequired();
             builder.Property(m => m.Email).HasColumnType("varchar").HasMaxLength(70).IsRequired();
             builder.Property(m => m.Phone).HasColumnType("varchar").HasMaxLength(30).IsRequired();
+            builder.Property(m => m.ImagePath).HasColumnType("varchar").HasMaxLength(50).IsRequired();
+            builder.Property(m => m.Rate).HasColumnType("decimal").HasPrecision(3, 2).IsRequired();
+            builder.ConfigureAuditable();
 
             builder.HasKey(m => m.Id);
             builder.ToTable("Agents");
