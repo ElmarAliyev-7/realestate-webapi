@@ -27,8 +27,8 @@ namespace RealEstate.Persistence.Configurations
             builder.HasKey(m => m.Id);
             builder.ToTable("Announcements");
 
-            builder.HasOne<City>().
-                WithMany()
+            builder.HasOne<City>()
+                .WithMany()
                 .HasForeignKey(m => m.CityId)
                 .HasPrincipalKey(m => m.Id)
                 .OnDelete(DeleteBehavior.NoAction);
