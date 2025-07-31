@@ -11,6 +11,7 @@ namespace RealEstate.Persistence.Configurations
         {
             builder.Property(m => m.BlogPostId).HasColumnName("int");
             builder.Property(m => m.TagId).HasColumnName("int");
+
             builder.ConfigureAuditable();
 
             builder.HasKey(m => new { m.BlogPostId, m.TagId });

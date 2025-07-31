@@ -16,6 +16,7 @@ namespace RealEstate.Persistence.Configurations
             builder.Property(m => m.Body).HasColumnType("nvarchar(max)").IsRequired();
             builder.Property(m => m.PublishedAt).HasColumnType("datetime");
             builder.Property(m => m.PublishedBy).HasColumnType("int");
+
             builder.ConfigureAuditable();
 
             builder.HasKey(m => m.Id);

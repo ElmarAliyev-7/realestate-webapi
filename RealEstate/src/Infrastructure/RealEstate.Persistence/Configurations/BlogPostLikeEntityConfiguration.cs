@@ -10,6 +10,7 @@ namespace RealEstate.Persistence.Configurations
         public void Configure(EntityTypeBuilder<BlogPostLike> builder)
         {
             builder.Property(m => m.BlogPostId).HasColumnType("int").IsRequired();
+
             builder.ConfigureAuditable();
 
             builder.HasKey(m => new { m.BlogPostId, m.CreatedBy });

@@ -12,6 +12,7 @@ namespace RealEstate.Persistence.Configurations
             builder.Property(m => m.SpecificationId).HasColumnType("int").IsRequired();
             builder.Property(m => m.AnnouncementId).HasColumnType("int").IsRequired();
             builder.Property(m => m.Value).HasColumnType("nvarchar").HasMaxLength(500).IsRequired();
+
             builder.ConfigureAuditable();
 
             builder.HasKey(m => new { m.SpecificationId, m.AnnouncementId });

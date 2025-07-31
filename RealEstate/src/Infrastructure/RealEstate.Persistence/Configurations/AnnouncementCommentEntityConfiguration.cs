@@ -13,10 +13,23 @@ namespace RealEstate.Persistence.Configurations
             builder.Property(m => m.AnnouncementId).HasColumnType("int").IsRequired();
             builder.Property(m => m.ParentId).HasColumnType("int");
             builder.Property(m => m.Text).HasColumnType("nvarchar(max)").IsRequired();
+
             builder.ConfigureAuditable();
 
             builder.HasKey(m => m.Id);
             builder.ToTable("AnnouncementComments");
+
+            builder.HasOne<Announcement>()
+                .WithMany()
+                .HasForeignKey(m => m.AnnouncementId)
+                .HasPrincipalKey(m => m.Id)
+                .OnDelete(DeleteBehavior.NoAction);
+
+            builder.HasOne<AnnouncementComment>()
+                .WithMany()
+                .HasForeignKey(m => m.ParentId)
+                .HasPrincipalKey(m => m.Id)
+                .OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

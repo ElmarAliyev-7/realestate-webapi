@@ -13,6 +13,7 @@ namespace RealEstate.Persistence.Configurations
             builder.Property(m => m.BlogPostId).HasColumnType("int").IsRequired();
             builder.Property(m => m.ParentId).HasColumnType("int");
             builder.Property(m => m.Text).HasColumnType("nvarchar(max)").IsRequired();
+
             builder.ConfigureAuditable();
 
             builder.HasKey(m => m.Id);

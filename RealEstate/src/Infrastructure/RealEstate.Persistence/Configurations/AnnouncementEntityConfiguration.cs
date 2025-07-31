@@ -21,11 +21,23 @@ namespace RealEstate.Persistence.Configurations
             builder.Property(m => m.Price).HasColumnType("decimal").HasPrecision(18, 2).IsRequired();
             builder.Property(m => m.PriceUnit).HasColumnType("int").IsRequired();
             builder.Property(m => m.FromAgent).HasColumnType("bit").IsRequired();
-            builder.ConfigureAuditable();
 
+            builder.ConfigureAuditable();
 
             builder.HasKey(m => m.Id);
             builder.ToTable("Announcements");
+
+            builder.HasOne<City>().
+                WithMany()
+                .HasForeignKey(m => m.CityId)
+                .HasPrincipalKey(m => m.Id)
+                .OnDelete(DeleteBehavior.NoAction);
+
+            builder.HasOne<Category>()
+                .WithMany()
+                .HasForeignKey(m => m.CategoryId)
+                .HasPrincipalKey(m => m.Id)
+                .OnDelete(DeleteBehavior.NoAction);
         }
     }
 }
